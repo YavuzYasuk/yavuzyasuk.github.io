@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
         }, 500);
     }
 });
-
+/* utf8-fix */
 document.addEventListener('DOMContentLoaded', () => {
 
     const basliklar = document.querySelectorAll('h2'); // Tüm H2 basliklarini sec
