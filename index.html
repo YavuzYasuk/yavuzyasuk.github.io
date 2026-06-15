@@ -6,16 +6,34 @@
     <title>Yavuz Yasuk</title>
     <link rel="icon" type="image/png" href="img/basss.png">
 
+    <!-- Import Map: tarayıcıya 'three' kelimesini nerede bulacağını söyler -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Preloader Yükleme Ekranı -->
+    <div id="preloader">
+        <div class="loader-yazi">YAVUZ YASUK</div>
+    </div>
+    
+    <!-- Arka Plan Partikül Sistemi -->
+    <canvas id="particle-canvas"></canvas>
     <nav class="navbar">
          <div class="container"> <ul class="nav-links">
-            <li><a href="#hakkimda">Hakkımda</a></li> <li class="dropdown">
-                <a href="#projeler">Projelerim ▼</a>
+            <li><a href="index.html#hakkimda">Hakkımda</a></li> <li class="dropdown">
+                <a href="#">Projelerim ▼</a>
                 <ul class="dropdown-content">
-                    <li><a href="#mimariprojeler">Mimari Projeler</a></li>
-                    <li><a href="#jamler">Jamler</a></li>
+                    <li><a href="proje-detay.html">Mimari Projeler</a></li>
+                    <li><a href="jam.html">Jamler</a></li>
+                    <li><a href="preview.html">Preview</a></li>
                 </ul>
             </li>
             <li><a href="#iletisim">İletişim</a></li>
@@ -44,7 +62,7 @@ Ekip çalışması deneyimi kazanmak ve modelleme ile sanat tasarımı beceriler
 
 <section id="projeler" class="container">
     <section id="mimariprojeler">
-    <div class="hakkimda-flex flex-reverse"> <div class="hakkimda-metin">
+    <div class="hakkimda-flex"> <div class="hakkimda-metin">
             <h2>Mimari Projeler</h2>
             <p>
                 Her proje bir analizle doğar: arazi, işlev, ölçek, çevre. Bu yapılar da farklı değil. Kentin gereksinimlerinden ilham alınarak kurgulanan bu tasarımlar, mimari düşüncenin dijital bir yansımasıdır.
@@ -53,20 +71,26 @@ Ekip çalışması deneyimi kazanmak ve modelleme ile sanat tasarımı beceriler
 
         <div class="hakkimda-resim">
         <div class="pafta-galeri">
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.1.png" class="pafta-katman" alt="Katman 1"> </a>
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.2.png" class="pafta-katman" alt="Katman 2"> </a>
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.3.png" class="pafta-katman" alt="Katman 3"> </a>
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.4.png" class="pafta-katman" alt="Katman 4"> </a>
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.5.png" class="pafta-katman" alt="Katman 5"> </a>
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.6.png" class="pafta-katman" alt="Katman 6"> </a>
-            <a href="proje-detay.html" class="pafta-katman">
-             <img src="img/1.7.png" class="pafta-katman" alt="Katman 7"> </a>
+            <a href="proje-detay.html#pro1" class="pafta-katman">
+             <img src="img/1.1.png" alt="Katman 1"> </a>
+            <a href="proje-detay.html#pro2" class="pafta-katman">
+             <img src="img/1.2.png" alt="Katman 2"> </a>
+            <a href="proje-detay.html#pro3" class="pafta-katman">
+             <img src="img/1.3.png" alt="Katman 3"> </a>
+            <a href="proje-detay.html#pro4" class="pafta-katman">
+             <img src="img/1.4.png" alt="Katman 4"> </a>
+            <a href="proje-detay.html#pro5" class="pafta-katman">
+             <img src="img/1.5.png" alt="Katman 5"> </a>
+            <a href="proje-detay.html#pro6" class="pafta-katman">
+             <img src="img/1.6.png" alt="Katman 6"> </a>
+            <a href="proje-detay.html#pro7" class="pafta-katman">
+             <img src="img/1.7.png" alt="Katman 7"> </a>
+           </div>
+           
+
+           
+           <div style="text-align: center;">
+               <a href="proje-detay.html" class="hepsini-gor-btn">Hepsini Gör</a>
            </div>
         </div>
     </div>
@@ -75,11 +99,17 @@ Ekip çalışması deneyimi kazanmak ve modelleme ile sanat tasarımı beceriler
      <div class="hakkimda-flex">
          <div class="hakkimda-resim">
              <div class="istif-galeri">
-                <a href="jam.html" class="pafta-katman">
-            <img src="img/2.1.png" class="istif-katman" alt="Proje 2.1"> </a>
-                 <a href="jam.html" class="pafta-katman">
-            <img src="img/2.2.jpg" class="istif-katman" alt="Proje 2.2"> </a>
+                 <a href="jam.html" class="istif-katman">
+            <img src="img/2.1.png" alt="Proje 2.1"> </a>
+                 <a href="jam.html" class="istif-katman">
+            <img src="img/2.2.jpg" alt="Proje 2.2"> </a>
         </div>
+
+
+
+        <div style="text-align: center;">
+             <a href="jam.html" class="hepsini-gor-btn">Hepsini Gör</a>
+         </div>
     </div>
     <div class="hakkimda-metin">
         <h2>Jam Projeleri</h2>
@@ -92,6 +122,23 @@ Ekip çalışması deneyimi kazanmak ve modelleme ile sanat tasarımı beceriler
     </div>
 </div>
 </section>
+</section>
+
+<section id="model-bolumu" class="container">
+    <div class="hakkimda-flex">
+        <div class="hakkimda-metin">
+            <h2>3D Proje Modeli</h2>
+            <p>
+                Projenin detaylarını 3 boyutlu olarak inceleyebilirsiniz. Etkileşimli ortam sayesinde fare ile tıklayarak, sürükleyerek ve yakınlaştırarak projeyi dilediğiniz açıdan keşfedin.
+            </p>
+            <a href="preview.html" class="hepsini-gor-btn" style="margin-top: 15px;">Tüm Modelleri Gör</a>
+        </div>
+        <div class="hakkimda-resim" style="width: 100%;">
+            <div id="3d-model-alani" class="model-kapsayici">
+                <div id="model-ipucu" style="display:none;">🖱️ Döndür · Scroll: Yakınlaştır · Sürükle: Kaydır</div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="iletisim" class="container">
@@ -119,11 +166,12 @@ Ekip çalışması deneyimi kazanmak ve modelleme ile sanat tasarımı beceriler
     </div>
 </section>
 
-<ul class="nav-links">
-    <li><a href="#projeler">Projelerim</a></li>
-    <li><a href="#hakkimda">Hakkımda</a></li>
-    <li><a href="#iletisim">İletişim</a></li>
-</ul>
+    <!-- glb_data.js önce yüklenmeli: window.MODEL_GLB_BASE64 global değişkenini oluşturur -->
+    <script src="glb_data.js"></script>
+    <!-- app.js: importmap sayesinde 'three' bare specifier artık çözülür -->
+    <script type="module" src="app.js"></script>
+    <!-- Animasyonlar ve Efektler -->
+    <script src="effects.js"></script>
 
 </body>
 </html>
